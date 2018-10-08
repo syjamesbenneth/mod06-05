@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM selector</title>
+</head>
+
+<body>
+	
+		<p class="paragraph"> This is paragraph 1</p>
+		<p class="paragraph"> This is paragraph 2</p>
+		<p class="paragraph"> This is paragraph 3</p>
+		<p class="paragraph"> This is paragraph 4</p>
+		<p class="paragraph"> This is paragraph 5</p>
+		<p class="paragraph" id="p1"> This is paragraph 6</p>
+	
+
+	<script type="text/javascript">
+		// let x = document.getElementsByClassName('paragraph')[0].innerHTML;
+		// console.log(x);
+		// document.getElementsByClassName('paragraph')[0].innerHTML = "Hello World";
+
+		// document.getElementById("p2").style.color = "blue";
+
+		// let paragraphs = document.getElementsByClassName('paragraph');
+		// for (i = 0; i < paragraphs.length; i++) {
+		// 	paragraphs[i].style.color = "red";
+		// }
+		//Tip when using getElementsByClassName or Tag name, it's better to store the value in a variable and manipulate that variable as an array.
+
+		//Exercise 2
+		//make all the even paragraphs green and make all the odd paragraphs blue
+
+		let paragraphs = document.getElementsByClassName('paragraph');
+		for (j = 0; j < paragraphs.length; j++) {
+			if ((j+1) % 2 == 0 ) {
+				paragraphs[j].style.color = "green";
+		} else {
+			paragraphs[j].style.color = "blue";
+		}
+	}
+
+	//Query selector
+	document.querySelector('#p1').innerHTML = "Not a hashtag";
+
+	document.querySelector('.paragraph').innerHTML = "Anyare";
+
+	//it gets the FIRST elemtn that matches the query
+	// Q how do we instead ALL the elements taht match the query?
+	//A: document.querySelectorAll() instead
+
+	//Examples
+	// document.querySelectorAll("p.paragraph")
+	// document.querySelectorAll("div > p")
+	// document.querySelectorAll("img[src]")
+
+	let z = document.querySelectorAll("p.paragraph");
+	z[1].innerHTML = "Hello World"
+	</script>
+
+
+
+</body>
+</html>

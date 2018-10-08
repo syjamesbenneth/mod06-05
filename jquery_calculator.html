@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+</head>
+	<body>
+
+<!-- 	<label>Input 1: <input type="number" id="input1">  </label> <br>
+	<label>Input 2: <input type="number" id="input2"> </label> <br>
+	<label> Result: <span id="result"></span></label>
+ -->
+	enter 1st operand: <input type="number" name="operand1" id="operand1">  
+
+	enter 2nd operand: <input type="number" name="operand2" id="operand2"> 
+
+	<br>
+	<br>
+
+		<span id="result">Result: </span> <br>
+<button id="add">Add</button>
+
+<button id="subtract">Subtract</button>
+
+<button id="multiply">Multiply</button>
+
+<button id="divide">Divide</button>
+
+<button id="modulo">Modulo</button>
+	
+
+
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js">
+	</script>
+
+	<script type="text/javascript">
+
+	// Add
+		const getInputs = () => {
+			let op1 = Number($("#operand1").val());
+			let op2 = Number($("#operand2").val());
+			let	operands = [op1, op2];
+			return operands;
+		}
+		$("#add").click(()=> {
+			let operands = getInputs();
+			let sum = operands[0] + operands[1];
+			$("#result").html(sum);
+		});
+
+		// Subtract
+		
+		$("#subtract").click(()=> {
+			let operands = getInputs();
+			let difference = operands[0] - operands[1];
+			$("#result").html(difference);
+		});
+
+		// Multiply
+		
+		$("#multiply").click(()=> {
+			let operands = getInputs();
+			let sum = operands[0] * operands[1];
+			$("#result").html(sum);
+		});
+
+		// Divide
+		
+		$("#divide").click(()=> {
+			let operands = getInputs();
+			let sum = operands[0] / operands[1];
+			$("#result").html(sum);
+		});
+
+		// Modulo
+		
+		$("#modulo").click(()=> {
+			let operands = getInputs();
+			let sum = operands[0] % operands[1];
+			$("#result").html(sum);
+		});
+
+
+	</script>
+
+
+
+	</body>
+</html>

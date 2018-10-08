@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What Jquery can do</title>
+</head>
+<body>
+
+<h1>What can Jquery do?</h1>
+<hr>
+
+<p>Jquery can hide/show elements</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggleall">Toggle All</button>
+
+<h2 id="content1">Jquery can change the html content</h2>
+	<button id="change">Change</button>
+	<button id="revert">Revert</button>
+
+<h2>Jquery can change HTML attributes</h2>
+<!-- insert image -->
+
+<img id="mayuri" src="./assets/img/_hq.jpg" height="300px">
+	<button id="enlarge">Click to enlarge</button>
+	<button id="reduce">Click to reduce</button>
+	<button id="changeimage">Click to change</button>
+
+<h2 id="idcss">Jquery can change css style</h2>
+	<button type="button" id="button5">
+		Click Me!
+	</button>
+	<button type="button" id="button6">
+		Revert
+	</button>
+
+<script type="text/javascript">
+		const hideAll = () => {
+			document.getElementbyId
+		}
+</script>
+
+	<script type="text/javascript">
+		// document.getElementById('content1').innerHTML = "javascript"
+	</script>
+
+
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js">
+
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide();
+    });
+    $("#show").click(function(){
+        $("p").show();
+    });
+});
+			//toggle
+			$("#toggleall").click(function(){
+        $("p").toggle();
+    });
+
+		//1st
+		$("#change").click(function(){
+			$("#content1").html('TUTURUU');
+		});
+		//2nd
+		$("#revert").click(function(){
+			$("#content1").html('Jquery can change the html content');
+		});
+
+
+
+		//3rd
+		$("#enlarge").click(function(){
+			$("#mayuri").css ('height', '600px');
+
+		});
+
+		$("#reduce").click(function(){
+			$("#mayuri").css ('height', '300px');
+
+		});
+
+		$("#changeimage").click(function(){
+			$("#mayuri").attr ('src', './assets/img/asda.jpg');
+
+		});
+
+
+		//4th
+		$("#button5").click(function(){
+			$("#idcss").css ('color', 'red');
+
+		});
+
+		$("#button6").click(function(){
+			$("#idcss").css ('color', 'black');
+
+		});
+
+		
+	</script>
+
+
+</body>
+</html>

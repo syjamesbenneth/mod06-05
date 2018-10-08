@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+</head>
+	<body>
+	<p id="lorem">Hello World</p>
+
+	<button id="changeContent">Click Me</button>
+	<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js">
+
+	</script>
+	<script type="text/javascript">
+		//let x = $("lorem").html ();
+		$('#changeContent').click(function(){
+		let x = $("#lorem").html();
+		if (x == "Hello World"){
+			$("#lorem").html("Hi");
+		} else {
+			$("#lorem").html("Hello World");
+		} 
+});
+
+	</script>
+
+	</body>
+</html>

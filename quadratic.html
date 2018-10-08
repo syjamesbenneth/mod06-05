@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<label for="coeff1">coeff1 </label>
+<input type="number" id="one"> </input> <br>
+<label for="coeff2">coeff2</label>
+<input type="number" id="two"></input> <br>
+<label for="coeff3">coeff3</label>
+<input type="number" id="three"></input> <br>
+
+<button id="button1">Output</button>
+<span id="result1"></span>
+<span id="result2"></span>
+
+<script type="text/javascript">
+
+	document.getElementById('button1').onclick = () => {
+	let coeff1 = Number(document.getElementById('one').value);
+	let coeff2 = Number(document.getElementById('two').value);
+	let coeff3 = Number(document.getElementById('three').value);
+	// alert(coeff1);
+	// alert(coeff2);
+	// alert(coeff3);
+	// other
+	// alert(negate(coeff1));
+	// alert(getDiscriminant(coeff1, coeff2, coeff3));
+	// alert(testDiscriminant(coeff1, coeff2, coeff3));}
+	document.getElementById('result1').innerHTML = (get_positive_root(coeff1, coeff2, coeff3)) + "<br>";
+	document.getElementById('result2').innerHTML = (get_negative_root(coeff1, coeff2, coeff3))  + "<br>";
+
+// if (testDiscriminant(coeff1, coeff2, coeff3)) {
+// 	document.getElementById
+// 
+}
+
+const negate = (num1) => {
+	return (-1 * num1);
+}
+
+//Square root - Math.sqrt(num);
+
+const getDiscriminant =(a,b,c) => {
+	return ((b*b) - (4*a*c));
+}
+
+const testDiscriminant = (a,b,c) => {
+	if (getDiscriminant (a,b,c) >= 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+// Next 9.
+
+// if testDiscriminant = (a,b,c >= 0) {
+// 	alert (getDiscriminant(a,b,c));
+// } else {
+// 	alert ("no real roots");
+// }
+
+
+//10.
+
+// const get_positive_root = (a,b,c) =>{
+// 	let positive =  ((-b + Math.sqrt(b*b - 4ac))/2a) ;
+// 	return positive;
+// }
+
+// const get_negative_root = (a,b,c) =>{
+// 	let negative =((-b - Math.sqrt(b*b - 4ac))/2a) ;
+// 	return negative;
+// }
+
+const get_positive_root = (a,b,c) => {
+	return (negate(b)+ Math.sqrt(getDiscriminant(a,b,c))) / (2*a);
+}
+
+const get_negative_root = (a,b,c) => {
+	return (negate(b)- Math.sqrt(getDiscriminant(a,b,c))) / (2*a);
+}
+
+// 
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

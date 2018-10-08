@@ -1,0 +1,145 @@
+Functions
+
+Set of instructions that is grouped together by a name
+
+<input type = "text" id="name">
+<button onclick="greetPerson()"> Greet person </button>
+<script type="text/javascript">
+const greetPerson = () => {
+    let name = document.getElementById('name').value;
+    alert("Hello " + name);
+}
+</script>
+
+xxx
+
+function parts es5
+1. function declaration
+2. function <name> (parameters) {
+    do something here;
+}
+
+ex:
+function greetPerson() {
+    var name = document.getElementById('name').value;
+alert("Hello " + name);
+}
+
+xxx
+
+//parameters
+const greetPerson = (name) => {
+    alert("Hello " + name);
+}
+greetPerson("Brandon");
+greetPerson("Monika");
+greetPerson("Harry");
+
+
+xxx
+
+Function es5 vs es6
+
+ES5
+function greetPerson(name) {
+alert ("Hello " + name);
+}
+
+ES6
+const greetPerson = (name) => {
+	alert ("Hello " + name );
+	//=> arrow notation defines what it does
+}
+
+xxx
+add an onclick event on my button
+document.getElementById('clickMe').onclick = () => {
+	
+}
+
+xxx
+
+1. create files called quadratic.html and quadratic.js
+2. 2 number fields and button - name each field as coeff 1,2,3
+for quadratic js add an onclick element to your button and aert the 3 inputs fromt he html when the button is clicked
+
+xxx
+4. create a function that returns the negative of its input.
+5. find out the function used to determine the square root of its input
+
+
+xxx
+(-b +/= sqrt(b*b - 4ac))/2a
+xxx
+
+6. create a function that calculates the following
+ computes the formula (b*b - 4*a*c)
+
+7. create a function that determines the following
+returns true if discriminant is positive
+returns false if discriminant is negative
+
+xxx
+
+8. Test our functions using alerts.
+
+9. After button is clicked, use testDiscriminant to do the following:
+alert the discriminant if it is positive
+alert "no real roots" if it is false
+xxx
+10. Create two functions named get_positive_root and 
+get_negative_root following the quadratic equation
+
+positive root: (-b + sqrt(b*b - 4ac))/2a
+negative root: (-b - sqrt(b*b - 4ac))/2a
+
+xxx
+11. test out get_positive_root and get_negative_root by placing the result in a span 
+Output: 
+root1: answer
+root 2: answer
+
+xxx
+selectors.html
+Make each paragraph text color be red using javascript
+
+
+xxx
+jQuery
+Javascript Framework
+
+document.getElementById('heading').innerHTML = "javascript" 
+->
+$('#heading').html("javascript")
+
+xxx
+
+$(selector).action()
+$ - indicates a jquery statement
+seelctor - to find html element
+action () - a jquery action to be performed on element
+
+xxx
+using jquery events:
+$(selector).event(function(){
+	
+});
+using jquery actions
+$(selector).action(parameters);
+
+<script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js">
+	</script>
+xxx
+1. Create a new file called WhatJquerycando.html
+redo the instructions for What JS can do and convert it to jquery syntax
+
+xxx
+
+file name jquery_calculator.html
+Convert the calculator activity to jQuery
+
+q: what is the jquery equivalent of document.getElementById().value
+
+
+
+

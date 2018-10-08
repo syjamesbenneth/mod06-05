@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+</head>
+<body>
+
+ 	<button id="clickMe">Click me</button>
+	<script type="text/javascript">
+		// alert("Hello");
+		// // greetPerson();
+		// //parameters
+		// const greetPerson = (name) => {
+		//     alert("Hello " + name);
+		// }
+		// greetPerson("Brandon");
+		// greetPerson("Monika");
+		// greetPerson("Harry");
+		// // create a function that adds two numbers.
+		// const addNumbers = (a,b) => {
+		// 	alert (a+b);
+		// }
+		// addNumbers (3,5);
+		// addNumbers (6,10);
+
+		//add an onclick event on my button
+			document.getElementById('clickMe').onclick = () => {
+				let x = addNumbers(15,90);
+				// Q: what is  x? A: 114
+				let y = addNumbers(10, addNumbers(6,34));
+				alert (name()+ name2());
+				alert(square(square(2)));
+				//1st step - add 6 and 34 and return output
+				//let y = addNumbers(10,40);
+				//2nd step
+				//add 10 and 40 and return output
+				//let y = 50;
+				// alert(addNumbers(3,7));
+				// addNumbers(3,7);
+				// addNumbers(9,15);
+				alert(x);
+			}
+
+
+			const addNumbers = (a,b) => {
+				return a+b;
+			}
+
+			// const name = () =>
+			// 	return "lorem";
+
+			// const name2 = () => {
+			// 	return "ipsum";
+			// }
+
+			// const x = 5;
+			// x++;
+			// alert(x); //error because x is constant
+
+			//addNumbers - function name
+			// a,b parameters
+			//return a+b -> return statement
+
+			//Make a function that returns the square of the of a number
+
+			
+			const square = (a) => {
+				let squared = a*a;
+				return squared;
+			}
+
+			
+
+
+	</script>
+
+</body>
+</html>
